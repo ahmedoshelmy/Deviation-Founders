@@ -11,6 +11,8 @@ median_age = hascardio['age'].median()
 max_age = hascardio['age'].max()
 min_age = hascardio['age'].min()
 std_age = hascardio['age'].std()
+cardiosmokers = hascardio[hascardio['smoke'] == 1]
+cardio_not_smokers = hascardio[hascardio['smoke'] == 0]
 
 print('The average age that has cardio ', median_age)
 print('The median age that has cardio ', mean_age)
@@ -18,9 +20,12 @@ print('The most frequent age that has cardio ', mode_age )
 print('The older age that has cardio ', max_age )
 print('The smaller age that has cardio ', min_age )
 print('The Standard Deviation of the ages that have cardio ', std_age )
-
+print('The number of people that have cardio and are smokers ',len(cardiosmokers['smoke']))
+print('The number of people that have cardio and are not smokers ',len(cardio_not_smokers['smoke']))
 #print(hascardio)
 plt.ylabel('Ages')
 plt.title("Has cardio age box plot")
 plt.boxplot(hascardio['age'])
 plt.show()
+#plt.bar(hascardio['age'], hascardio['gender'], color ='salmon',width = 0.4)
+#plt.show()
