@@ -19,7 +19,7 @@ print('The older age that has cardio ', max_age )
 print('The smaller age that has cardio ', min_age )
 print('The Standard Deviation of the ages that have cardio ', std_age )
 
-print(hascardio)
+#print(hascardio)
 plt.ylabel('Ages')
 plt.title("Has cardio age box plot")
 plt.boxplot(hascardio['age'])
